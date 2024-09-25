@@ -1,4 +1,3 @@
-var l : number[];
 var max : number = 0;
 var count : number = 1;
 var start : number = 0;
@@ -37,7 +36,6 @@ r.question("Enter array size : ", (size : string) => {
         }
         
         console.log("The Maximum value is : " ,max);
-        
-        console.log(numberArray.slice(start,end));
+        console.log(numberArray.slice(start,end));        
    });
 });

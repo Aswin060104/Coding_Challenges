@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var l;
 var max = 0;
 var count = 1;
 var start = 0;
