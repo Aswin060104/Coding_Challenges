@@ -1,0 +1,133 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    overflow-x: hidden;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.left-container{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    height: auto;
+    left: 0px;
+    width: 15%;
+    padding: 20px;
+    padding-bottom: 0px;
+    border-color: rgb(183, 182, 243);
+    box-shadow: 1px 1px 5px rgb(183, 182, 243);
+    border-radius: 5px;
+    font-size: 20px;
+    top: 0;
+}
+.horizontal-line{
+    height: 1px;
+    width: 100%;
+    background-color: black;
+}
+.vertical-line{
+    height: 100%;
+    width: 1px;
+    background-color: black;
+}
+.val-1, .val-2{
+    padding: 10px;
+    cursor: pointer;
+}
+.right-container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.right-container-heading{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 0px 20px;
+}
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    border-color: rgb(183, 182, 243);
+    box-shadow: 1px 1px 5px rgb(183, 182, 243);
+    border-radius: 5px;
+    padding: 40px;
+    margin: 20px;
+    margin-bottom: 0px;
+    height: auto;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    background-color: rgb(236, 240, 245);
+    box-shadow: 2px 2px 5px rgb(205, 204, 223);
+    border-radius: 5px;
+    padding: 25px;
+    row-gap: 15px;
+}
+.card-heading{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    gap: 10px;
+
+}
+/* .card-heading div button{
+    
+} */
+.course-logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.card-heading div img{
+    height:50px;
+    width: 50px;
+}
+.course-name{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.course-name h3{
+    margin: 5px;
+}
+.course-name button{
+    width: auto;
+}
+.card-rating{
+    font-size: 12px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+}
+.card-button{
+    width: 100%;
+}
+.card-button button{
+    width: 100%;
+    background-color: rgb(39, 39, 189);
+    border-radius: 5px;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+}
+.card-button button:hover{
+    background-color: rgb(19, 19, 158);
+    transition: 0.2s ease all;
+    cursor: pointer;
+}
+
+ 
