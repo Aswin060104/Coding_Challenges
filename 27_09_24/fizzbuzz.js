@@ -1,11 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var readline = require("readline");
-var r = readline.createInterface({
+var r3 = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
-r.question("Enter the Number : ", function (n) {
+r3.question("Enter the Number : ", function (n) {
     var range = Number(n);
     for (var i = 1; i <= range; i++) {
         if (i % 3 == 0 && i % 5 == 0)
@@ -18,4 +18,3 @@ r.question("Enter the Number : ", function (n) {
             console.log(i);
     }
 });
-r.close();

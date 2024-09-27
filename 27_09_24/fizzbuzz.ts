@@ -1,15 +1,11 @@
+import * as r from 'readline';
 
-
-import { stdin } from 'process';
-import * as readline from 'readline';
-
-const r = readline.createInterface({
+const r3 = r.createInterface({
     input : process.stdin,
     output : process.stdout
-}
-);
+});
 
-r.question("Enter the Number : ",(n :string) => {
+r3.question("Enter the Number : ",(n :string) => {
     var range : number = Number(n);
     for(var i : number = 1; i <= range; i++){
         if(i%3==0 && i%5==0)
@@ -20,6 +16,5 @@ r.question("Enter the Number : ",(n :string) => {
             console.log("Buzz - ",i);
         else
         console.log(i);
-        
     }
 });
