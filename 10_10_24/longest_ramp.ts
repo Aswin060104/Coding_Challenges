@@ -19,6 +19,7 @@ Explanation: The maximum width ramp is achieved at (i, j) = (2, 9): nums[2] = 1 
 
 */
 
+
 function maxWidthRamp(ar: number[]): number {
     var max: number = 0;
     var stack: number[] = [];
@@ -26,7 +27,6 @@ function maxWidthRamp(ar: number[]): number {
         if (stack.length == 0 || ar[stack[stack.length - 1]] > ar[i])
             stack.push(i);
     }
-
     var maxWidth: number = 0;
     for (var j = ar.length - 1; j > -1; j--) {
         while (ar[j] >= ar[stack[stack.length - 1]]) {
@@ -36,5 +36,6 @@ function maxWidthRamp(ar: number[]): number {
             stack.pop();
         }
     }
+
     return maxWidth;
 };
