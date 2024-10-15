@@ -22,3 +22,17 @@ function checkPerfectNumber(num) {
     return tot == num ? true : false;
 }
 ;
+// var n : number = 10;
+// if( n % 2 == 0)
+//     console.log("Even");
+// else
+//     console.log("Odd");
+var arr = [5, 6, 7, 8]; // 0 1 2 3  length : 4
+//console.log(arr[2]);
+// console.log(arr.length);
+// for(var i : number = 0;)
+var i = 0;
+while (i < 5) {
+    console.log(i); // 0 1 2 3 4
+    i++; // 1 2 3 4 5
+}
