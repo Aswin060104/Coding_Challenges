@@ -1,42 +1,35 @@
-var a : number = Number("100");
-var b : number = Number("110010");
+/*
+67. Add Binary
+Given two binary strings a and b, return their sum as a binary string.
 
-var ans : string[] = [];
+ 
 
-var carry : number = 0;
+Example 1:
 
-console.log(a+" \n"+b);
+Input: a = "11", b = "1"
+Output: "100"
+Example 2:
 
-while(a > 0 || b > 0){
-    var tem : number = a%10 + b%10;
-    a = Math.trunc(a/10);
-    b = Math.trunc(b/10);
-    
-    if(tem == 2){
-        if(carry == 1){
-            ans.unshift('1');
-            carry = 0;
-        }
-        else{
-            ans.unshift('0');
-        }
+Input: a = "1010", b = "1011"
+Output: "10101"
+
+*/
+function addBinary(x: string, y: string): string {
+    var a : number = 0;
+    var b : number = 0;
+    var carry : number = 0;
+
+    var sum : number = 0;
+
+    var result : string = "";
+    var i : number = x.length - 1;
+    var j : number = y.length - 1;
+    while( i > -1 || j > -1){
+        a = parseInt(x[i--] ?? "0");
+        b = parseInt(y[j--] ?? "0");
+        sum = a + b + carry;
+        carry = ( sum > 1) ? 1 : 0;
+        result = ((sum % 2 == 1) ? "1" : "0") + result;
     }
-    else if( tem == 1 ){
-        if(carry == 1){
-            ans.unshift('0');
-            carry = 1;
-        }
-        else
-            ans.unshift('1');
-    }
-    else{
-        if(carry == 1){
-            ans.unshift('1');
-            carry = 0;
-        }
-        else{
-            ans.unshift("0");
-        }
-    }
+    return carry == 1 ? "1" + result : result;
 }
-console.log(ans);
