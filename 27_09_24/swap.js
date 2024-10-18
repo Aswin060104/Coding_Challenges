@@ -6,7 +6,7 @@ var c = readline.createInterface({
     output: process.stdout
 });
 c.question("Enter a and b : ", function (values) {
-    console.log(values.split(" "));
+    console.log(values);
     var a = Number((values.split(" "))[0]);
     var b = Number((values.split(" "))[1]);
     a = a + b;
