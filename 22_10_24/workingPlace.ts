@@ -2,6 +2,7 @@ var input = require('prompt-sync')();
 var age = Number(input("Enter the Age : "));
 var sex = input("Enter sex : ( M or F : ) ");
 var maritalStatus = input("Enter marital Status : ");
+
 if(sex === "F")
     console.log("She will only work in urban");
 else if(sex === "M"){
