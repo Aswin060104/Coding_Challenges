@@ -1,0 +1,8 @@
+.scroll-container img{
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: transform 0.1s ease; /* Corrected the typo here */
+    transform: scale(1);
+}

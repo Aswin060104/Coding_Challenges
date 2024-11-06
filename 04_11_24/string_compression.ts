@@ -12,8 +12,6 @@ Remove a maximum length prefix of word made of a single character c repeating at
 Append the length of the prefix followed by c to comp.
 Return the string comp.
 
- 
-
 Example 1:
 
 Input: word = "abcde"
