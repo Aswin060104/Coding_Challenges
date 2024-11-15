@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hidden Links</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        nav {
+            background-color: #c8cdd7;
+        }
+        ul{
+            margin: 0px;
+            display: flex;
+            flex-direction: row;
+        }
+        li {
+            list-style-type: none;
+            padding: 10px;
+            position: relative;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        li ul{
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            padding: 0px;
+            margin: 0px;
+            border: 1px solid lightblue;
+        }
+
+        li:hover > ul {
+            display: block;
+        }
+        ul li:hover{
+            background-color: rgb(227, 220, 220);
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="">Home</a>
+                <ul>
+                    <li>About</li>
+                    <li>Contact</li>
+                    <li>Location</li>
+                </ul>
+            </li>
+            <li>
+                <a href="">Home</a>
+                <ul>
+                    <li>About</li>
+                    <li>Contact</li>
+                    <li>Location</li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</body>
+
+</html>
