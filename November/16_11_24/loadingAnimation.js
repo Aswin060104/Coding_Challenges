@@ -1,8 +1,3 @@
-var circle1 = document.getElementById('1');
-var circle2 = document.getElementById('2');
-var circle3 = document.getElementById('3');
-var circle4 = document.getElementById('4');
-var circle5 = document.getElementById('5');
 var toggle = false;
 var circle;
 function controlAnimation() {
