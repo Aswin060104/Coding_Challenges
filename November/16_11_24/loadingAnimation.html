@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        body div{
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+        .circle{
+            width: 30px;
+            height: 30px;
+            background-color: cadetblue;
+            perspective: 100px;
+            opacity: 0;
+        }
+        .start{
+            animation: zoom 1.4s infinite forwards;
+        }
+        stop{
+            animation: none;
+        }
+        @keyframes zoom {
+            0%{
+                opacity: 0;
+            }
+            50%{
+                opacity: 0.5;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        .circle:nth-child(1){
+            animation-delay: 0.1s;
+        }
+        .circle:nth-child(2){
+            animation-delay: 0.3s;
+        }
+        .circle:nth-child(3){
+            animation-delay: 0.5s;
+        }
+        .circle:nth-child(4){
+            animation-delay: 0.6s;
+        }
+        .circle:nth-child(5){
+            animation-delay: 0.9s;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="circles">
+        <div class="circle" id="1"></div>
+        <div class="circle" id="2"></div>
+        <div class="circle" id="3"></div>
+        <div class="circle" id="4"></div>
+        <div class="circle" id="5"></div>
+    </div>
+    <button onclick="controlAnimation()"> Start / Stop Animation</button>
+    <script src="loadingAnimation.js"></script>
+</body>
+</html>
