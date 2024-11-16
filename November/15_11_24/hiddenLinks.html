@@ -28,7 +28,15 @@
         a {
             text-decoration: none;
         }
-
+        li:hover li::before{
+            position: absolute;
+            content: "";
+            height: 2px;
+            background-color: black;
+            bottom: 0;
+            left:0;
+            animation: slow 1s forwards;
+        }
         li ul{
             display: none;
             position: absolute;
@@ -38,7 +46,6 @@
             margin: 0px;
             border: 1px solid lightblue;
         }
-
         li:hover > ul {
             display: block;
         }
@@ -67,6 +74,7 @@
                     <li>Location</li>
                 </ul>
             </li>
+            <li>Contact</li>
         </ul>
     </nav>
 </body>
