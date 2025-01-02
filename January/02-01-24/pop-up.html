@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        padding: 0px;
+        margin: 0px;
+        place-self: center;
+    }
+
+    .hide {
+        display: none;
+        animation: popup 1s reverse;
+    }
+
+    .pop-up {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+        row-gap: 10px;
+        background-color: rgb(220, 228, 231);
+        border-radius: 5px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: alternate 0.5s popup;
+        z-index: 2;
+    }
+
+    .pop-up input {
+        width: 80%;
+        border: none;
+        padding: 10px;
+    }
+
+    .pop-up button {
+        background-color: green;
+    }
+
+    @keyframes popup {
+        0% {
+            transform: translate(-50%, -50%) scale(0);
+        }
+
+        100% {
+            transform: translate(-50%, -50%) scale(1);
+        }
+    }
+
+    button {
+        border: none;
+        background-color: rgb(2, 2, 129);
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        place-self: center;
+    }
+
+    button:hover {
+        background-color: rgb(37, 4, 155);
+    }
+
+    .dim {
+        background-color: rgb(0, 0, 0, 0.5);
+    }
+</style>
+
+<body id="body">
+    <button onclick="showPopUp()">View Pop up</button>
+    <div id="pop-up-container" class="hide">
+        Form
+        <input type="text" placeholder="Enter the name">
+        <input type="text" placeholder="Enter the password">
+        <button>Login</button>
+    </div>
+</body>
+<script>
+    var show = true;
+    function showPopUp() {
+        var div = document.getElementById("pop-up-container");
+        var body = document.getElementById("body");
+        if (show) {
+            div.classList.add("pop-up");
+            body.classList.add("dim");
+            show = !show;
+        }
+        else{
+            div.classList.remove("pop-up");
+            body.classList.remove("dim");
+            show = !show;
+        }
+    }
+</script>
+
+</html>
