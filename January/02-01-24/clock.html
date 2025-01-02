@@ -5,7 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .clock{
+        place-self: center;
+        border: black solid 1px;
+        height: 300px;
+        width: 300px;
+        border-radius: 50%;
+        position: relative;
+    }
+    .clock p{
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-size: 10px;
+    }
+    .clock p::after{
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 145px;
+        height: 2px;
+        transform-origin: 0% 100%;
+        background-color: black;
+        animation: rotate forwards 10s infinite linear;
+        z-index: 4;
+    }
+    .clock p::before{
+        content: " ";
+        position: absolute;
+        background-color: blue;
+        width: 100px;
+        height: 2px;
+        top:50%;
+        left: 50%;
+        animation: rotate 120s infinite linear;
+        transform-origin: 0% 100%;
+    }
+    @keyframes rotate {
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(360deg);
+        }
+    }
+</style>
 <body>
-    
+    <h3>
+        Clock Animation
+    </h3>
+    <div class="clock">
+        <p>o</p>
+    </div>
 </body>
 </html>
