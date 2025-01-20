@@ -20,10 +20,10 @@
 // Output: 2
 
 function subarraySum(nums: number[], k: number): number {
-    var i: number = 0;
-    var j: number = 1;
-    var sum: number = nums[i];
-    var count: number = 0;
+    let i: number = 0;
+    let j: number = 1;
+    let sum: number = nums[i];
+    let count: number = 0;
     while (j < nums.length || i < nums.length) {
         if (sum == k) {
             count++;
