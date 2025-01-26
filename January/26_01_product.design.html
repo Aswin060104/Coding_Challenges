@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .body{
+            width: 0%;
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+        .table-container{
+            height: max-content;
+            width: max-content;
+            padding: 10px;
+            box-shadow: 0 0 1px rgb(152, 152, 175);;
+        }
+        .table-container-heading{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+        }
+        .table-container-heading h4{
+            margin: 0px;
+        }
+        .table-container-heading button{
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 2px 15px;
+            border-radius: 5px;
+        }
+        table{
+            border-collapse: collapse ;
+            padding: 10px;
+        }
+        thead tr{
+            border: white;
+            font-weight: bold;
+            color: rgb(108, 105, 105);
+        }
+        tr{
+            border-top: 1px solid rgb(184, 184, 196);;
+        }
+        td{
+            padding: 10px;
+        }
+        .product-container{
+            width: max-content;
+            padding: 20px;
+            box-shadow: 0 0 2px rgb(152, 152, 175);
+            height: max-content;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            border-radius: 5px;
+        }
+        .product-container h3{
+            margin: 0px;
+        }
+        .search-bar{
+            border: 1px solid black;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        .search-bar input{
+            border: none;
+        }
+        .search-bar input:focus{
+            outline: none;
+        }
+        .search-bar img{
+            height: 10px;
+        }
+        .product-details-container{
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgb(152, 152, 175);
+        }
+        .product-img img{
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="table-container">
+        <div class="table-container-heading">
+            <h4>Recent Invoice</h4>
+            <button>Filter</button>
+        </div>
+        <table>
+            <thead>
+                <td>No</td>
+                <td>Customer ID</td>
+                <td>Customer Name</td>
+                <td>City</td>
+                <td>Amount</td>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Aswin_1000</td>
+                    <td>Aswin</td>
+                    <td>Madurai</td>
+                    <td>$1000</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Aswin_1000</td>
+                    <td>Aswin</td>
+                    <td>Madurai</td>
+                    <td>$1000</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="product-container">
+        <h3>Top Products</h3>
+        <div class="search-bar">
+            <img src="search.png" alt="">
+            <input type="text" placeholder="Search">    
+        </div>
+        <div class="product-details-container">
+            <div class="product-img">
+                <img src="nike_shoe.jpg" alt="">
+            </div>
+            <div class="product-details">
+                <div>
+                    Nike football shoe
+                </div>
+                <div>
+                    Sports Shoe | 35%
+                </div>
+            </div>
+        </div>
+        <div class="product-details-container">
+            <div class="product-img">
+                <img src="nike_shoe.jpg" alt="">
+            </div>
+            <div class="product-details">
+                <div>
+                    Nike : football shoe
+                </div>
+                <div>
+                    Sports Shoe | 35%
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
